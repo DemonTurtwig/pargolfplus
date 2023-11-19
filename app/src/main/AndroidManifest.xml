@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest package="com.pgp.app" xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <application android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name" android:largeHeap="true"
+        android:name="com.pgp.app.appcomponents.di.MyApp"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true" android:theme="@style/Theme.MyApp" android:usesCleartextTraffic="true">
+        <activity
+            android:name="com.pgp.app.modules.homemenu.ui.HomeMenuActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.pgp.app.modules.resetpassword.ui.ResetpasswordActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.pgp.app.modules.courses20.ui.Courses20Activity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.pgp.app.modules.statistics.ui.StatisticsActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.pgp.app.modules.intromain.ui.IntromainActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.pgp.app.modules.signup.ui.SignupActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.pgp.app.modules.profile.ui.ProfileActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.pgp.app.modules.history.ui.HistoryActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.pgp.app.modules.recordscore30.ui.RecordScore30Activity" android:screenOrientation="portrait"/>
+        <activity android:exported="true"
+            android:name="com.pgp.app.modules.intro.ui.IntroActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.pgp.app.modules.recordscore10.ui.RecordScore10Activity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.pgp.app.modules.homelog.ui.HomelogActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.pgp.app.modules.login.ui.LoginActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.pgp.app.modules.recordscore20.ui.RecordScore20Activity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.pgp.app.modules.courses10.ui.Courses10Activity" android:screenOrientation="portrait"/>
+    </application>
+</manifest>

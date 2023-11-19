@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="signupVM" type="com.pgp.app.modules.signup.data.viewmodel.SignupVM"/>
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/linearSignUp"
+            style="@style/groupStylewhite_A700"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/linearTitleBar"
+                style="@style/groupStylewhite_A700"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10pxv"
+                android:layout_marginTop="@dimen/_30pxh"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:id="@+id/signLayout"
+                    android:layout_width="@dimen/_120pxv"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="left">
+
+                    <TextView
+                        android:id="@+id/textView7"
+                        android:layout_width="@dimen/_60pxv"
+                        android:layout_height="@dimen/_24pxh"
+                        android:layout_gravity="left"
+                        android:layout_marginLeft="@dimen/_30pxv"
+                        android:fontFamily="@font/interbold"
+                        android:text="@string/lbl_sign_up2"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_16sp" />
+
+                    <ImageButton
+                        android:id="@+id/imageButton"
+                        android:layout_width="@dimen/_30pxv"
+                        android:layout_height="@dimen/_25pxh"
+                        android:layout_gravity="left"
+                        android:background="@color/white"
+                        app:srcCompat="@drawable/img_arrowleft" />
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearCreateusername"
+                style="@style/groupStylecornerRadius"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_24pxh"
+                android:layout_marginTop="@dimen/_24pxv"
+                android:layout_marginEnd="@dimen/_24pxh"
+                android:gravity="start"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtCreateusername"
+                    style="@style/txtIntersemibold14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_10pxh"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="@{signupVM.signupModel.txtCreateusername}"
+                    tools:text="@string/lbl_username" />
+
+                <EditText
+                    android:id="@+id/inputUsername"
+                    style="@style/etSolidRounded"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_11pxv"
+                    android:background="@drawable/rectangle_bg_gray_100_radius_8"
+                    android:ellipsize="end"
+                    android:hint="@string/lbl_username"
+                    android:inputType="text"
+                    android:paddingStart="@dimen/_13pxh"
+                    android:paddingTop="@dimen/_12pxv"
+                    android:paddingEnd="@dimen/_30pxh"
+                    android:paddingBottom="@dimen/_11pxv"
+                    android:singleLine="true"
+                    android:text="@={signupVM.signupModel.etInputTextOnlyValue}"
+                    android:textColorHint="@color/gray_500"
+                    tools:ignore="Autofill" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearFirstname"
+                style="@style/groupStylecornerRadius"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_24pxh"
+                android:layout_marginTop="@dimen/_16pxv"
+                android:layout_marginEnd="@dimen/_24pxh"
+                android:gravity="start"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtFirstname"
+                    style="@style/txtIntersemibold14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_10pxh"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="@{signupVM.signupModel.txtFirstname}"
+                    tools:text="@string/lbl_first_name" />
+
+                <EditText
+                    android:id="@+id/fnInput"
+                    style="@style/etSolidRounded"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_11pxv"
+                    android:background="@drawable/rectangle_bg_gray_100_radius_8"
+                    android:ellipsize="end"
+                    android:hint="@string/msg_input_first_nam"
+                    android:inputType="text"
+                    android:paddingStart="@dimen/_13pxh"
+                    android:paddingTop="@dimen/_13pxv"
+                    android:paddingEnd="@dimen/_30pxh"
+                    android:paddingBottom="@dimen/_9pxv"
+                    android:singleLine="true"
+                    android:text="@={signupVM.signupModel.etInputTextOnlyOneValue}"
+                    android:textColorHint="@color/gray_500"
+                    tools:ignore="Autofill" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearFirstname1"
+                style="@style/groupStylecornerRadius"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_24pxh"
+                android:layout_marginTop="@dimen/_16pxv"
+                android:layout_marginEnd="@dimen/_24pxh"
+                android:gravity="start"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtLastname"
+                    style="@style/txtIntersemibold14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_10pxh"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="@{signupVM.signupModel.txtLastname}"
+                    tools:text="@string/lbl_last_name" />
+
+                <EditText
+                    android:id="@+id/lnInput"
+                    style="@style/etSolidRounded"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_11pxv"
+                    android:background="@drawable/rectangle_bg_gray_100_radius_8"
+                    android:ellipsize="end"
+                    android:hint="@string/lbl_input_last_name"
+                    android:inputType="text"
+                    android:paddingStart="@dimen/_13pxh"
+                    android:paddingTop="@dimen/_13pxv"
+                    android:paddingEnd="@dimen/_30pxh"
+                    android:paddingBottom="@dimen/_9pxv"
+                    android:singleLine="true"
+                    android:text="@={signupVM.signupModel.etInputTextOnlyTwoValue}"
+                    android:textColorHint="@color/gray_500"
+                    tools:ignore="Autofill" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearCreatepassword"
+                style="@style/groupStylecornerRadius"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_24pxh"
+                android:layout_marginTop="@dimen/_17pxv"
+                android:layout_marginEnd="@dimen/_24pxh"
+                android:gravity="start"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtCreatepassword"
+                    style="@style/txtIntersemibold14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_10pxh"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="@{signupVM.signupModel.txtCreatepassword}"
+                    tools:text="@string/lbl_create_password" />
+
+                <EditText
+                    android:id="@+id/pwInput"
+                    style="@style/etSolidRounded"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10pxv"
+                    android:background="@drawable/rectangle_bg_gray_100_radius_8"
+                    android:drawableEnd="@drawable/img_eye"
+                    android:drawablePadding="@dimen/_30pxh"
+                    android:ellipsize="end"
+                    android:hint="@string/lbl_create_password"
+                    android:inputType="textPassword"
+                    android:paddingStart="@dimen/_12pxh"
+                    android:paddingTop="@dimen/_13pxv"
+                    android:paddingEnd="@dimen/_12pxh"
+                    android:paddingBottom="@dimen/_9pxv"
+                    android:singleLine="true"
+                    android:text="@={signupVM.signupModel.etInputTextRiValue}"
+                    android:textColorHint="@color/gray_500"
+                    tools:ignore="Autofill" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearConfirmpasswor"
+                style="@style/groupStylecornerRadius"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_24pxh"
+                android:layout_marginTop="@dimen/_17pxv"
+                android:layout_marginEnd="@dimen/_24pxh"
+                android:gravity="start"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtConfirmpasswor"
+                    style="@style/txtIntersemibold14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_10pxh"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="@{signupVM.signupModel.txtConfirmpasswor}"
+                    tools:text="@string/msg_confirm_passwor" />
+
+                <EditText
+                    android:id="@+id/confirmpwInput"
+                    style="@style/etSolidRounded"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10pxv"
+                    android:background="@drawable/rectangle_bg_gray_100_radius_8"
+                    android:drawableEnd="@drawable/img_eye"
+                    android:drawablePadding="@dimen/_30pxh"
+                    android:ellipsize="end"
+                    android:hint="@string/msg_confirm_passwor"
+                    android:inputType="textPassword"
+                    android:paddingStart="@dimen/_12pxh"
+                    android:paddingTop="@dimen/_13pxv"
+                    android:paddingEnd="@dimen/_12pxh"
+                    android:paddingBottom="@dimen/_9pxv"
+                    android:singleLine="true"
+                    android:text="@={signupVM.signupModel.etInputTextRiOneValue}"
+                    android:textColorHint="@color/gray_500"
+                    tools:ignore="Autofill" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearAgreement"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_27pxh"
+                android:layout_marginTop="@dimen/_18pxv"
+                android:layout_marginEnd="@dimen/_27pxh"
+                android:gravity="start"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/agreeTnC"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_9pxh" />
+
+                <TextView
+                    android:id="@+id/txtBycreatingan"
+                    style="@style/txtInterregular14_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_16pxh"
+                    android:layout_weight="0.5"
+                    android:lineSpacingExtra="@dimen/_6pxh"
+                    android:text="@{signupVM.signupModel.txtBycreatingan}"
+                    tools:text="@string/msg_by_creating_a_n" />
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnCreateAccount"
+                style="@style/btnSolidRounded_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_24pxh"
+                android:layout_marginTop="@dimen/_25pxv"
+                android:layout_marginEnd="@dimen/_24pxh"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_15pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingBottom="@dimen/_15pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_create_account"
+                android:textAllCaps="false"
+                tools:text="@string/lbl_create_account" />
+
+            <LinearLayout
+                android:id="@+id/linearBottom"
+                style="@style/groupStylewhite_A700"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_3pxh"
+                android:layout_marginTop="@dimen/_117pxv"
+                android:layout_marginBottom="@dimen/_43pxv"
+                android:orientation="vertical">
+
+                <View
+                    android:id="@+id/lineLineOne"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1pxv"
+                    android:layout_gravity="start"
+                    android:background="@color/bluegray_50" />
+
+                <LinearLayout
+                    android:id="@+id/linearRowconfirmation"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/_24pxh"
+                    android:layout_marginEnd="@dimen/_24pxh"
+                    android:layout_marginBottom="@dimen/_21pxv"
+                    android:gravity="start"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txtConfirmation"
+                        style="@style/txtIntersemibold14_1"
+                        android:layout_width="@dimen/_145pxv"
+                        android:layout_height="@dimen/_40pxh"
+                        android:layout_weight="0.82"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="@{signupVM.signupModel.txtConfirmation}"
+                        android:textSize="@dimen/_16sp"
+                        tools:text="@string/msg_already_have_an" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnLanguage"
+                        style="@style/btnInterbold14"
+                        android:layout_width="@dimen/_70pxh"
+                        android:layout_height="@dimen/_70pxv"
+                        android:layout_marginStart="@dimen/_108pxh"
+                        android:layout_marginBottom="@dimen/_1pxv"
+                        android:background="#00FFFFFF"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="@string/lbl_login3"
+                        android:textAllCaps="false"
+                        android:textSize="@dimen/_16sp"
+                        tools:text="@string/lbl_login3" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</layout>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="recordScore10VM" type="com.pgp.app.modules.recordscore10.data.viewmodel.RecordScore10VM"/>
+    </data>
+    <FrameLayout android:id="@+id/frameRecordScore1"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" style="@style/groupStylewhite_A700">
+        <ImageView android:id="@+id/imageMaps"
+            android:layout_gravity="start"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:scaleType="fitXY" imageRes="@{@drawable/img_maps}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_maps"/>
+        <LinearLayout android:id="@+id/linearColumnarrowleft"
+            android:layout_gravity="bottom|start"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10pxv"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <ImageView android:id="@+id/imageArrowleft"
+                android:layout_height="@dimen/_13pxh"
+                android:layout_marginEnd="@dimen/_29pxh"
+                android:layout_marginStart="@dimen/_29pxh"
+                android:layout_width="@dimen/_7pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_arrowleft_white_a700"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_arrowleft_white_a700"/>
+            <TextView android:id="@+id/clubnamescore10"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_25pxh"
+                android:layout_marginStart="@dimen/_25pxh"
+                android:layout_marginTop="@dimen/_69pxv"
+                android:layout_width="match_parent"
+                android:text="@{recordScore10VM.recordScore10Model.txtMeadowSprings}"
+                style="@style/txtInterbold24" tools:text="@string/msg_glenmarie_golf"/>
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="@dimen/_150pxv"
+                android:layout_height="@dimen/_40pxh"
+                android:layout_marginStart="@dimen/_26pxv"
+                android:fontFamily="@font/interregular"
+                android:text="@string/lbl_selangor"
+                android:textColor="#A2FFFFFF" />
+
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearCard"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_520pxv"
+                android:layout_width="match_parent"
+                android:orientation="horizontal" style="@style/groupStylewhite_1">
+                <ImageView android:id="@+id/imageLocation"
+                    android:layout_height="@dimen/_24pxh"
+                    android:layout_marginBottom="@dimen/_44pxv"
+                    android:layout_marginStart="@dimen/_21pxh"
+                    android:layout_marginTop="@dimen/_52pxv"
+                    android:layout_width="@dimen/_16pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_location"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_location"/>
+
+                <LinearLayout
+                    android:id="@+id/linearColumntitle"
+                    android:layout_width="@dimen/_160pxv"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_13pxh"
+                    android:layout_marginTop="@dimen/_46pxv"
+                    android:layout_marginBottom="@dimen/_15pxv"
+                    android:layout_weight="0.22"
+                    android:gravity="start">
+
+                    <TextView
+                        android:id="@+id/club1"
+                        style="@style/txtInterbold28"
+                        android:layout_width="@dimen/_70pxv"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="@{recordScore10VM.recordScore10Model.txtTitle}"
+                        tools:text="@string/lbl_hole" />
+
+                    <TextView
+                        android:id="@+id/valueHole10"
+                        style="@style/txtInterbold28_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="@{recordScore10VM.recordScore10Model.txtThreeOne}"
+                        tools:text="@string/lbl_03" />
+
+                    <LinearLayout
+                        android:id="@+id/linearRowsubtitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_7pxv"
+                        android:layout_marginEnd="@dimen/_10pxh"
+                        android:gravity="start"
+                        android:orientation="horizontal">
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineDrawer"
+                    android:layout_width="@dimen/_90pxv"
+                    android:layout_height="@dimen/_6pxv"
+                    android:layout_marginStart="@dimen/_14pxh"
+                    android:layout_marginTop="@dimen/_16pxv"
+                    android:layout_marginBottom="@dimen/_99pxv"
+                    android:layout_weight="0.18"
+                    android:background="@drawable/rectangle_bg_gray_400_radius_3" />
+                <androidx.appcompat.widget.AppCompatButton
+                    android:ellipsize="end" android:gravity="center"
+                    android:id="@+id/btnScore"
+                    android:layout_height="@dimen/_40pxv"
+                    android:layout_marginBottom="@dimen/_32pxv"
+                    android:layout_marginEnd="@dimen/_27pxh"
+                    android:layout_marginStart="@dimen/_28pxh"
+                    android:layout_marginTop="@dimen/_48pxv"
+                    android:layout_width="@dimen/_115pxh"
+                    android:paddingBottom="@dimen/_11pxv"
+                    android:paddingEnd="@dimen/_30pxh"
+                    android:paddingStart="@dimen/_30pxh"
+                    android:paddingTop="@dimen/_11pxv"
+                    android:singleLine="true"
+                    android:text="@string/lbl_score"
+                    android:textAllCaps="false"
+                    style="@style/btnRoundedOutline" tools:text="@string/lbl_score"/>
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+</layout>
