@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="courses12VM" type="com.pgp.app.modules.courses12.data.viewmodel.Courses12VM"/>
+    </data>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearCourses12"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <TextView android:ellipsize="end" android:gravity="start"
+            android:id="@+id/txtTitleBar"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/_20pxv"
+            android:layout_width="match_parent"
+            android:paddingBottom="@dimen/_10pxv"
+            android:paddingStart="@dimen/_25pxh"
+            android:paddingTop="@dimen/_30pxv" android:singleLine="true"
+            android:text="@{courses12VM.courses12Model.txtTitleBar}"
+            style="@style/txtInterregular14_4" tools:text="@string/msg_please_select_a"/>
+    </LinearLayout>
+</layout>

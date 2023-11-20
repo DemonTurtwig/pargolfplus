@@ -10,6 +10,7 @@ import com.pgp.app.appcomponents.base.BaseActivity
 import com.pgp.app.databinding.ActivityCourses10Binding
 import com.pgp.app.modules.courses10.`data`.model.ListtitleRowModel
 import com.pgp.app.modules.courses10.`data`.viewmodel.Courses10VM
+import com.pgp.app.modules.courses11.ui.Courses11Activity
 import com.pgp.app.modules.courses20.ui.Courses20Activity
 import kotlin.Int
 import kotlin.String
@@ -48,7 +49,7 @@ class Courses10Activity : BaseActivity<ActivityCourses10Binding>(R.layout.activi
   ): Unit {
     when(view.id) {
       R.id.linearColumnline ->  {
-        val destIntent = Courses20Activity.getIntent(this, null)
+        val destIntent = Courses11Activity.getIntent(this, null)
         startActivity(destIntent)
       }
     }
