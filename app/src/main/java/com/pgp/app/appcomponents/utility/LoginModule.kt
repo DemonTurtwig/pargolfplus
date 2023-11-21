@@ -6,9 +6,11 @@ import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.text.Editable
 import android.text.TextWatcher
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import com.pgp.app.appcomponents.utility.AppPreferencesHelper.saveUsername
 import com.pgp.app.modules.homelog.ui.HomelogActivity
 
 class LoginModule
@@ -17,7 +19,7 @@ class LoginModule
     private val context: Context,
     private val btnLogin: Button,
     private val inputUsername: EditText,
-    private val pwInput: EditText,
+    private val pwInput: EditText
 
     )
     {
@@ -46,6 +48,7 @@ class LoginModule
                 // Perform login when the button is clicked
 
                 loginUser()
+
             }
         }
 
@@ -55,13 +58,14 @@ class LoginModule
         }
 
         private fun loginUser() {
-            val dbHelper =
-                RegisterDBHelper(context)
+            val dbHelper = RegisterDBHelper(context)
             val db: SQLiteDatabase = dbHelper.readableDatabase
 
             val username = inputUsername.text.toString()
             val password = pwInput.text.toString()
-            AppPreferencesHelper.saveUsername(context, "username");
+
+            Log.d("LoginModule", "Logging in with username: $username")
+
             // Check if the user exists in the database
             val cursor: Cursor = db.rawQuery(
                 "SELECT * FROM ${RegisterDBHelper.TABLE_NAME} " +
@@ -70,9 +74,11 @@ class LoginModule
                 arrayOf(username, password)
             )
 
+            saveUsername(context, username)
+
             if (cursor.moveToFirst()) {
                 // User exists, login successful
-
+                Log.d("LoginModule", "Login successful!")
 
                 Toast.makeText(context, "Login successful!", Toast.LENGTH_SHORT).show()
                 val intent = Intent(context, HomelogActivity::class.java)
@@ -80,6 +86,7 @@ class LoginModule
 
             } else {
                 // User does not exist or incorrect credentials
+                Log.d("LoginModule", "Invalid credentials. Please try again.")
                 Toast.makeText(context, "Invalid credentials. Please try again.", Toast.LENGTH_SHORT).show()
             }
 

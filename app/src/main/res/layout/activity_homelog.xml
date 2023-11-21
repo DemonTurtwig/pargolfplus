@@ -11,8 +11,8 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
             <LinearLayout
                 android:id="@+id/linearColumnrectanglefour"
@@ -423,11 +423,11 @@
                                 style="@style/txtInterbold15"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_gravity="center_horizontal"
                                 android:layout_marginStart="@dimen/_13pxh"
                                 android:layout_marginTop="@dimen/_30pxv"
-                                android:layout_marginEnd="@dimen/_13pxh"
+                                android:layout_marginEnd="@dimen/_12pxh"
                                 android:ellipsize="end"
+                                android:gravity="center"
                                 android:singleLine="true"
                                 android:text="@{homelogVM.homelogModel.txtFRI}"
                                 android:textSize="@dimen/_14sp"
@@ -502,12 +502,11 @@
                         <androidx.recyclerview.widget.RecyclerView
                             android:id="@+id/recyclerHomelog"
                             itemSpace="@{@dimen/_11pxh}"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="0.64"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
                             android:orientation="horizontal"
                             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                            tools:itemCount="20"
+                            tools:itemCount="3"
                             tools:listitem="@layout/row_homelog" />
 
                     </LinearLayout>

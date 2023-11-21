@@ -2,6 +2,7 @@ package com.pgp.app.appcomponents.utility
 
 import android.content.Context
 import android.content.SharedPreferences
+import android.util.Log
 import androidx.security.crypto.EncryptedSharedPreferences
 import androidx.security.crypto.MasterKeys
 import com.pgp.app.R
@@ -15,7 +16,7 @@ object AppPreferencesHelper {
     const val REGISTER_3 = "userlastname"
     const val REGISTER_4 = "userpassword"
     private val MASTER_KEY_ALIAS = createGetMasterKey()
-    private fun getSharedPreferences(context: Context): SharedPreferences {
+    fun getSharedPreferences(context: Context): SharedPreferences {
         return EncryptedSharedPreferences.create(
             context.resources.getString(R.string.app_name),
             MASTER_KEY_ALIAS,
@@ -30,15 +31,24 @@ object AppPreferencesHelper {
     }
 
     fun saveUsername(context: Context, username: String?) {
-        val editor = getSharedPreferences(context).edit()
-        editor.putString(KEY_USERNAME, username)
-        editor.apply()
+        Log.d("AppPreferencesHelper", "Saving username: $username")
+        try {
+            val editor = getSharedPreferences(context).edit()
+            editor.putString(KEY_USERNAME, username)
+            editor.apply()
+            Log.d("AppPreferencesHelper", "Username saved successfully.")
+        } catch (e: Exception) {
+            Log.e("AppPreferencesHelper", "Error saving username", e)
+        }
     }
+
 
     fun getFullName(context: Context, dbHelper: RegisterDBHelper): String {
         val username = getSharedPreferences(context).getString(KEY_USERNAME, "")
         val fullName = dbHelper.getFullNameByUsername(username)
+        Log.d("HomelogActivity", "Full Name from getFullName: $fullName")
         return fullName ?: ""
+
     }
 
     fun saveUserData(

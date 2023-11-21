@@ -13,15 +13,24 @@ import com.pgp.app.modules.resetpassword.ui.ResetpasswordActivity
 import kotlin.Int
 import kotlin.String
 import kotlin.Unit
+import com.pgp.app.appcomponents.utility.LoginModule
 
 class LoginActivity : BaseActivity<ActivityLoginBinding>(R.layout.activity_login) {
   private val viewModel: LoginVM by viewModels<LoginVM>()
-
+  private lateinit var loginModule: LoginModule
   private val REQUEST_CODE_RESETPASSWORD_ACTIVITY: Int = 590
 
   override fun onInitialized(): Unit {
     viewModel.navArguments = intent.extras?.getBundle("bundle")
     binding.loginVM = viewModel
+
+    // Initialize LoginModule
+    loginModule = LoginModule(
+      this,
+      binding.btnLogin,
+      binding.inputUsername,
+      binding.inputPassword
+    )
   }
 
   override fun setUpClicks(): Unit {

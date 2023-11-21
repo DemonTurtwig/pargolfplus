@@ -6,7 +6,7 @@ import kotlin.String
 
 data class HomelogModel(
   var txtHi: String? = MyApp.getInstance().resources.getString(R.string.lbl_hi),
-  var txtPhillipLow: String? = MyApp.getInstance().resources.getString(R.string.lbl_phillip_low),
+  var txtPhillipLow: String? = "Phillip Low",
   var txtZero: String? = MyApp.getInstance().resources.getString(R.string.lbl_00),
   var txt31hcp: String? = MyApp.getInstance().resources.getString(R.string.lbl_hcp),
   var txtNovember: String? = "January",

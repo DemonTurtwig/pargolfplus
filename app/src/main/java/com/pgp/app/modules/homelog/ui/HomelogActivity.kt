@@ -3,12 +3,15 @@ package com.pgp.app.modules.homelog.ui
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.activity.viewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.observe
 import com.pgp.app.R
 import com.pgp.app.appcomponents.base.BaseActivity
+import com.pgp.app.appcomponents.utility.AppPreferencesHelper
+import com.pgp.app.appcomponents.utility.RegisterDBHelper
 import com.pgp.app.databinding.ActivityHomelogBinding
 import com.pgp.app.modules.courses20.ui.Courses20Activity
 import com.pgp.app.modules.homelog.`data`.model.HomelogRowModel
@@ -28,10 +31,10 @@ class HomelogActivity : BaseActivity<ActivityHomelogBinding>(R.layout.activity_h
 
   private lateinit var viewModel: HomelogVM
   private val homelogAdapter = HomelogAdapter(mutableListOf())
-
+  private lateinit var dbHelper: RegisterDBHelper
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
-
+    dbHelper = RegisterDBHelper(this)
     viewModel = ViewModelProvider(this, HomelogVMFactory(this)).get(HomelogVM::class.java)
 
     // Observe changes in the ViewModel
@@ -46,6 +49,11 @@ class HomelogActivity : BaseActivity<ActivityHomelogBinding>(R.layout.activity_h
     viewModel.tomorrowdate1.observe(this) { value -> binding.tomorrowdate1.text = value }
     viewModel.tomorrowdate2.observe(this) { value -> binding.tomorrowdate2.text = value }
     viewModel.txtMM.observe(this) { value -> binding.txtMM.text = value }
+    viewModel.txtUsername.observe(this) { value ->
+      binding.txtUsernameMainPage.text = value }
+
+    val fullName = AppPreferencesHelper.getFullName(this, dbHelper)
+    binding.txtUsernameMainPage.text = fullName
 
     // Call the setupCalendar function
     setupCalendar()
@@ -64,7 +72,7 @@ class HomelogActivity : BaseActivity<ActivityHomelogBinding>(R.layout.activity_h
 
   override fun onInitialized(): Unit {
 
-    }
+  }
 
 
   override fun setUpClicks(): Unit {

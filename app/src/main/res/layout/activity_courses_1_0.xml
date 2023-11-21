@@ -36,15 +36,18 @@
                         android:scaleType="fitXY"
                         android:src="@drawable/img_arrowleft"
                         tools:ignore="ContentDescription" tools:src="@drawable/img_arrowleft"/>
-                    <TextView android:ellipsize="end"
+
+                    <TextView
                         android:id="@+id/txtCourses"
+                        style="@style/txtInterbold16"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/_14pxh"
                         android:layout_weight="0.9"
-                        android:layout_width="0dp"
+                        android:ellipsize="end"
                         android:singleLine="true"
                         android:text="@{courses10VM.courses10Model.txtCourses}"
-                        style="@style/txtInterbold16" tools:text="@string/lbl_courses"/>
+                        tools:text="@string/clubs" />
                 </LinearLayout>
                 <TextView android:ellipsize="end"
                     android:id="@+id/txtFindaplaceto"

@@ -48,7 +48,7 @@
                     android:orientation="horizontal">
 
                     <View
-                        android:id="@+id/lineLineOne8"
+                        android:id="@+id/lineLineOne69"
                         android:layout_width="wrap_content"
                         android:layout_height="@dimen/_1pxv"
                         android:layout_gravity="start"
@@ -940,7 +940,7 @@
                     android:orientation="horizontal">
 
                     <View
-                        android:id="@+id/lineLineOne8"
+                        android:id="@+id/lineLineOne68"
                         android:layout_width="wrap_content"
                         android:layout_height="@dimen/_1pxv"
                         android:layout_gravity="start"

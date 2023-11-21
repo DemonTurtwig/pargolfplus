@@ -5,6 +5,8 @@ import android.os.Bundle
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.pgp.app.appcomponents.utility.AppPreferencesHelper
+import com.pgp.app.appcomponents.utility.RegisterDBHelper
 import com.pgp.app.modules.homelog.`data`.model.HomelogModel
 import com.pgp.app.modules.homelog.`data`.model.HomelogRowModel
 import kotlin.collections.MutableList
@@ -14,12 +16,12 @@ import java.util.Calendar
 import java.util.Date
 import java.util.Locale
 
-class HomelogVM(private val context: Context) : ViewModel(), KoinComponent{
-
+class HomelogVM(private val context: Context, private val dbHelper: RegisterDBHelper) : ViewModel(), KoinComponent{
 
   val homelogModel: MutableLiveData<HomelogModel> = MutableLiveData(HomelogModel())
 
   var navArguments: Bundle? = null
+
 
   val homelogList: MutableLiveData<MutableList<HomelogRowModel>> = MutableLiveData(mutableListOf())
   val homelogRowModels: MutableLiveData<List<HomelogRowModel>> = MutableLiveData()
@@ -39,9 +41,11 @@ class HomelogVM(private val context: Context) : ViewModel(), KoinComponent{
   val tomorrowdate2: MutableLiveData<String?> = MutableLiveData("5")
 
   val txtMM: MutableLiveData<String> = MutableLiveData("January")
+  val txtUsername: MutableLiveData<String> = MutableLiveData("Phillip Low")
 
   init {
     getHomelogRowModels()
+
     homelogModel.value?.let { model ->
       txtMON.value = model.txtMON
       txtTUE.value = model.txtTUE
@@ -55,6 +59,9 @@ class HomelogVM(private val context: Context) : ViewModel(), KoinComponent{
       tomorrowdate2.value = model.txtEight
       txtMM.value =
         model.txtNovember ?: "January" // Use "January" as default if txtNovember is null
+
+      val fullName = AppPreferencesHelper.getFullName(context, dbHelper)
+      txtUsername.value = fullName ?: "Phillip Low"
     }
     updateLabels()
   }
@@ -92,7 +99,6 @@ class HomelogVM(private val context: Context) : ViewModel(), KoinComponent{
     homelogData.value = dataList
   }
 
-
   // Function to get a date with an offset from the current date
   private fun getOffsetDate(date: Date, offset: Int): Date {
     val calendar = Calendar.getInstance()
@@ -100,4 +106,7 @@ class HomelogVM(private val context: Context) : ViewModel(), KoinComponent{
     calendar.add(Calendar.DAY_OF_YEAR, offset)
     return calendar.time
   }
+
+
+
 }

@@ -307,14 +307,6 @@
                             android:layout_height="wrap_content"
                             android:text="@string/msg_the_mines_resor" />
 
-                        <TextView
-                            android:id="@+id/state6"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/_9pxv"
-                            android:layout_marginEnd="@dimen/_10pxh"
-                            android:text="@string/lbl_selangor"
-                            android:textSize="@dimen/_12pxh" />
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
