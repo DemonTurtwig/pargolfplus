@@ -4,15 +4,12 @@ import com.pgp.app.R
 import com.pgp.app.appcomponents.di.MyApp
 import kotlin.String
 
-data class ListtitleRowModel(
-  /**
-   * TODO Replace with dynamic value
-   */
-  var txtTitle: String? = MyApp.getInstance().resources.getString(R.string.msg_glenmarie_golf)
-  ,
-  /**
-   * TODO Replace with dynamic value
-   */
-  var txtSelangor: String? = MyApp.getInstance().resources.getString(R.string.lbl_selangor)
 
+data class ListtitleRowModel(
+  var txtTitle: String? = MyApp.getInstance().resources.getString(R.string.msg_glenmarie_golf),
+  var txtSelangor: String? = MyApp.getInstance().resources.getString(R.string.lbl_selangor),
+  var imageResId: Int? = null,
+  var txtClub: String? = MyApp.getInstance().resources.getString(R.string.msg_glenmarie_golf),
+  var txtTee: String? = MyApp.getInstance().resources.getString(R.string.tee_blue)
 )
+

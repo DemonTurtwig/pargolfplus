@@ -81,6 +81,13 @@
                         android:textStyle="bold"
                         tools:text="@string/msg_glenmarie_golf" />
 
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.82"
+                        android:text="TextView" />
+
                 </LinearLayout>
 
                 <LinearLayout

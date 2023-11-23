@@ -28,4 +28,5 @@ abstract class BaseActivity<T : ViewDataBinding>(@LayoutRes val layoutId: Int) :
         setUpClicks()
         onInitialized()
     }
+
 }

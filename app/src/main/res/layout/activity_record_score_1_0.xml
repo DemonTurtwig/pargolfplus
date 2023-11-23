@@ -70,7 +70,7 @@
                     android:gravity="start">
 
                     <TextView
-                        android:id="@+id/usernameValueText"
+                        android:id="@+id/txtClub"
                         style="@style/txtInterbold28"
                         android:layout_width="@dimen/_70pxv"
                         android:layout_height="wrap_content"

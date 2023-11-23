@@ -3,20 +3,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+        <variable name="listtitleRowModel" type="com.pgp.app.modules.courses10.data.model.ListtitleRowModel"/>
+    </data>
+
     <LinearLayout
         android:id="@+id/linearColumnline"
         style="@style/groupStylewhite_A700"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-
-        <View
-            android:id="@+id/lineLineOne10"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_1pxv"
-            android:layout_gravity="start"
-            android:layout_marginTop="@dimen/_14pxv"
-            android:background="@color/bluegray_50" />
 
         <LinearLayout
             android:id="@+id/linearRowtitle"
@@ -30,13 +26,11 @@
 
             <ImageView
                 android:id="@+id/clubimage123"
-                cornerRadius="@{@dimen/_8pxh}"
-                imageRes="@{@drawable/img_image}"
                 android:layout_width="@dimen/_72pxh"
                 android:layout_height="@dimen/_90pxh"
                 android:scaleType="fitXY"
-                tools:ignore="ContentDescription"
-                tools:src="@drawable/img_image" />
+                android:src="@{listtitleRowModel.imageResId}"
+                tools:ignore="ContentDescription" />
 
             <LinearLayout
                 android:id="@+id/linearColumntitle"
@@ -69,9 +63,4 @@
             android:background="@color/bluegray_50" />
 
     </LinearLayout>
-
-    <data>
-        <variable name="listtitleRowModel" type="com.pgp.app.modules.courses10.data.model.ListtitleRowModel"/>
-    </data>
-
 </layout>

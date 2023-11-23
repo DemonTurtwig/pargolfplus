@@ -15,6 +15,12 @@ object AppPreferencesHelper {
     const val REGISTER_2 = "userfirstname"
     const val REGISTER_3 = "userlastname"
     const val REGISTER_4 = "userpassword"
+
+    const val Club = "golfclub"
+    const val Malaysiastate = "state"
+    const val Course = "golfcourse"
+    const val TeeTee = "tee"
+
     private val MASTER_KEY_ALIAS = createGetMasterKey()
     fun getSharedPreferences(context: Context): SharedPreferences {
         return EncryptedSharedPreferences.create(
@@ -66,17 +72,35 @@ object AppPreferencesHelper {
         editor.apply()
     }
 
-    fun fetchUserData(context: Context): Map<String, String?> {
-        val sharedPreferences = getSharedPreferences(context)
-        val userData: MutableMap<String, String?> = HashMap()
-        userData[REGISTER_1] =
-            sharedPreferences.getString(REGISTER_1, "")
-        userData[REGISTER_2] =
-            sharedPreferences.getString(REGISTER_2, "")
-        userData[REGISTER_3] =
-            sharedPreferences.getString(REGISTER_3, "")
-        userData[REGISTER_4] =
-            sharedPreferences.getString(REGISTER_4, "")
-        return userData
+    fun saveGolfClubData(
+        context: Context,
+        club: String?,
+        state: String?,
+        course: String?,
+        tee: String?
+    ) {
+        Log.d("AppPreferencesHelper", "Saving Golf Club Data: $club, $state, $course, $tee")
+        try {
+            val editor = getSharedPreferences(context).edit()
+            editor.putString(Club, club)
+            editor.putString(Malaysiastate, state)
+            editor.putString(Course, course)
+            editor.putString(TeeTee, tee)
+            editor.apply()
+            Log.d("AppPreferencesHelper", "Golf Club Data saved successfully.")
+        } catch (e: Exception) {
+            Log.e("AppPreferencesHelper", "Error saving Golf Club Data", e)
+        }
     }
+
+    fun getClubId(context: Context, clubName: String): Long {
+        val sharedPreferences = getSharedPreferences(context)
+        val savedClubName = sharedPreferences.getString(Club, "")
+        return if (savedClubName == clubName) {
+            sharedPreferences.getLong(Course + "_$savedClubName", 0)
+        } else {
+            0
+        }
+    }
+
 }

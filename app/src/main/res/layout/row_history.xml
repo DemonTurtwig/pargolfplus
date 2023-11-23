@@ -20,7 +20,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/_3pxv"
                 android:layout_weight="0.77" android:layout_width="0dp" android:orientation="vertical">
-                <TextView android:id="@+id/usernameValueText"
+                <TextView android:id="@+id/txtClub"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="@dimen/_10pxh"
                     android:layout_width="match_parent"

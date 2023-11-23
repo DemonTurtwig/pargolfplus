@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
     <data>
         <variable name="courses12VM" type="com.pgp.app.modules.courses12.data.viewmodel.Courses12VM"/>
     </data>
@@ -8,15 +9,30 @@
         android:layout_height="match_parent"
         android:layout_width="match_parent"
         android:orientation="vertical" style="@style/groupStylewhite_A700">
-        <TextView android:ellipsize="end" android:gravity="start"
+
+        <TextView
             android:id="@+id/txtTitleBar"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="@dimen/_20pxv"
+            style="@style/txtSolid_1"
             android:layout_width="match_parent"
-            android:paddingBottom="@dimen/_10pxv"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="@font/interbold"
+            android:gravity="start"
             android:paddingStart="@dimen/_25pxh"
-            android:paddingTop="@dimen/_30pxv" android:singleLine="true"
+            android:paddingTop="@dimen/_30pxv"
+            android:paddingBottom="@dimen/_10pxv"
+            android:singleLine="true"
             android:text="@{courses12VM.courses12Model.txtTitleBar}"
-            style="@style/txtInterregular14_4" tools:text="@string/msg_please_select_a"/>
+            tools:text="@string/msg_please_select_a" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:gravity="center_horizontal"
+            android:id="@+id/recyclerListtitle"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_9pxh"
+            android:layout_marginStart="@dimen/_9pxh"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            itemSpace="@{@dimen/_1pxh}" tools:itemCount="3" tools:listitem="@layout/row_color_tee"/>
     </LinearLayout>
 </layout>

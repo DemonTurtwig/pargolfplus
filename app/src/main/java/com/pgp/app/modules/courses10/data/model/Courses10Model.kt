@@ -19,6 +19,9 @@ data class Courses10Model(
   /**
    * TODO Replace with dynamic value
    */
-  var txtTextlabel: String? = MyApp.getInstance().resources.getString(R.string.msg_type_to_search)
+  var txtTextlabel: String? = MyApp.getInstance().resources.getString(R.string.msg_type_to_search),
 
+  var txtTextChooseCourse: String? = MyApp.getInstance().resources.getString(R.string.msg_please_select_a2),
+
+  var TextChooseTee: String? = MyApp.getInstance().resources.getString(R.string.msg_please_select_a)
 )

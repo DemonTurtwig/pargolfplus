@@ -57,7 +57,7 @@
                     android:layout_weight="0.59"
                     android:layout_width="0dp" android:orientation="vertical">
                     <TextView android:ellipsize="end"
-                        android:id="@+id/usernameValueText"
+                        android:id="@+id/txtClub"
                         android:layout_height="wrap_content"
                         android:layout_width="match_parent"
                         android:singleLine="true"

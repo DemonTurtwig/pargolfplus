@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
     <data>
         <variable name="courses11VM" type="com.pgp.app.modules.courses11.data.viewmodel.Courses11VM"/>
     </data>
@@ -10,13 +11,25 @@
         android:orientation="vertical" style="@style/groupStylewhite_A700">
         <TextView android:ellipsize="end" android:gravity="start"
             android:id="@+id/txtTitleBar"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="@dimen/_20pxv"
+            android:layout_height="wrap_content"
             android:layout_width="match_parent"
             android:paddingBottom="@dimen/_10pxv"
             android:paddingStart="@dimen/_25pxh"
             android:paddingTop="@dimen/_30pxv" android:singleLine="true"
             android:text="@{courses11VM.courses11Model.txtTitleBar}"
-            style="@style/txtInterregular14_4" tools:text="@string/msg_please_select_a2"/>
+            style="@style/txtSolid_1" tools:text="@string/msg_please_select_a2"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerListtitle"
+            itemSpace="@{@dimen/_1pxh}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_9pxh"
+            android:layout_marginEnd="@dimen/_9pxh"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:itemCount="4"
+            tools:listitem="@layout/row_listtitle2" />
     </LinearLayout>
 </layout>

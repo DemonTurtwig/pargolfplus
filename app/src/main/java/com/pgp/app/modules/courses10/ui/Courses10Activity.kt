@@ -10,8 +10,7 @@ import com.pgp.app.appcomponents.base.BaseActivity
 import com.pgp.app.databinding.ActivityCourses10Binding
 import com.pgp.app.modules.courses10.`data`.model.ListtitleRowModel
 import com.pgp.app.modules.courses10.`data`.viewmodel.Courses10VM
-import com.pgp.app.modules.courses11.ui.Courses11Activity
-import com.pgp.app.modules.courses20.ui.Courses20Activity
+import androidx.lifecycle.Observer
 import kotlin.Int
 import kotlin.String
 import kotlin.Unit
@@ -21,18 +20,14 @@ class Courses10Activity : BaseActivity<ActivityCourses10Binding>(R.layout.activi
 
   override fun onInitialized(): Unit {
     viewModel.navArguments = intent.extras?.getBundle("bundle")
-    val listtitleAdapter = ListtitleAdapter(viewModel.listtitleList.value?:mutableListOf())
-    binding.recyclerListtitle.adapter = listtitleAdapter
-    listtitleAdapter.setOnItemClickListener(
-    object : ListtitleAdapter.OnItemClickListener {
-      override fun onItemClick(view:View, position:Int, item : ListtitleRowModel) {
-        onClickRecyclerListtitle(view, position, item)
-      }
-    }
-    )
-    viewModel.listtitleList.observe(this) {
-      listtitleAdapter.updateData(it)
-    }
+    val golfClubsAdapter = ListtitleAdapter(viewModel, emptyList())
+    binding.recyclerListtitle.adapter = golfClubsAdapter
+
+    viewModel.golfClubs.observe(this, Observer { golfClubs ->
+      // Ensure golfClubs is of type List<GolfClub>
+      golfClubsAdapter.updateData(golfClubs)
+    })
+
     binding.courses10VM = viewModel
   }
 
@@ -42,13 +37,14 @@ class Courses10Activity : BaseActivity<ActivityCourses10Binding>(R.layout.activi
     }
   }
 
+
   fun onClickRecyclerListtitle(
     view: View,
     position: Int,
     item: ListtitleRowModel
   ): Unit {
-    when(view.id) {
-      R.id.linearColumnline ->  {
+    when (view.id) {
+      R.id.linearColumnline -> {
         val destIntent = Courses11Activity.getIntent(this, null)
         startActivity(destIntent)
       }
@@ -57,7 +53,6 @@ class Courses10Activity : BaseActivity<ActivityCourses10Binding>(R.layout.activi
 
   companion object {
     const val TAG: String = "COURSES10ACTIVITY"
-
 
     fun getIntent(context: Context, bundle: Bundle?): Intent {
       val destIntent = Intent(context, Courses10Activity::class.java)

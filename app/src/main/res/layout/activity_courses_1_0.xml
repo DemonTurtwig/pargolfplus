@@ -46,7 +46,7 @@
                         android:layout_weight="0.9"
                         android:ellipsize="end"
                         android:singleLine="true"
-                        android:text="@{courses10VM.courses10Model.txtCourses}"
+                        android:text="@string/clubs"
                         tools:text="@string/clubs" />
                 </LinearLayout>
                 <TextView android:ellipsize="end"
@@ -57,7 +57,7 @@
                     android:layout_marginTop="@dimen/_16pxv"
                     android:layout_width="wrap_content"
                     android:singleLine="true"
-                    android:text="@{courses10VM.courses10Model.txtFindaplaceto}"
+                    android:text="@string/msg_find_a_place_to"
                     style="@style/txtInterregular14_4" tools:text="@string/msg_find_a_place_to"/>
             </LinearLayout>
         </androidx.appcompat.widget.Toolbar>
@@ -93,7 +93,7 @@
                         android:layout_weight="0.87"
                         android:layout_width="0dp"
                         android:singleLine="true"
-                        android:text="@{courses10VM.courses10Model.txtTextlabel}"
+                        android:text="@string/msg_type_to_search"
                         style="@style/txtInterregular14" tools:text="@string/msg_type_to_search"/>
                 </LinearLayout>
                 <View android:background="@color/bluegray_50"
@@ -113,7 +113,7 @@
                 android:gravity="center_horizontal"
                 android:orientation="vertical"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                tools:itemCount="136"
+                tools:itemCount="133"
                 tools:listitem="@layout/row_listtitle" />
         </LinearLayout>
     </LinearLayout>

@@ -6,7 +6,7 @@
     <FrameLayout android:id="@+id/frameCourses20"
         android:layout_height="match_parent"
         android:layout_width="match_parent" style="@style/groupStyleblack_900">
-        <ImageView android:id="@+id/clubimage1"
+        <ImageView android:id="@+id/clubimage123"
             android:layout_gravity="start"
             android:layout_height="match_parent"
             android:layout_width="match_parent"
@@ -36,7 +36,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_9pxh"
-                android:layout_marginTop="@dimen/_473pxv"
+                android:layout_marginTop="@dimen/_443pxv"
                 android:gravity="center_horizontal|left"
                 android:text="@{courses20VM.courses20Model.txtMeadowSprings}"
                 tools:text="@string/msg_glenmarie_golf" />
@@ -51,23 +51,45 @@
                 android:singleLine="true"
                 android:text="@{courses20VM.courses20Model.txtSelangor}"
                 style="@style/txtIntersemibold12" tools:text="@string/lbl_selangor"/>
+
+            <TextView
+                android:id="@+id/courseName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_12pxh"
+                android:layout_marginTop="@dimen/_1pxv"
+                android:fontFamily="@font/interbold"
+                android:text="@string/lbl_courses"
+                android:textColor="@color/bluegray_100" />
+
+            <TextView
+                android:id="@+id/teecolortextview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_12pxh"
+                android:fontFamily="@font/interbold"
+                android:text="@string/tee_blue"
+                android:textColor="@color/blue_400" />
+
             <androidx.appcompat.widget.AppCompatButton
-                android:ellipsize="end" android:gravity="center"
                 android:id="@+id/btnStartRound"
-                android:layout_gravity="start"
+                style="@style/btnRoundedOutline_1"
+                android:layout_width="@dimen/_156pxh"
                 android:layout_height="@dimen/_48pxv"
-                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_gravity="start"
                 android:layout_marginStart="@dimen/_9pxh"
                 android:layout_marginTop="@dimen/_7pxv"
-                android:layout_width="@dimen/_156pxh"
-                android:paddingBottom="@dimen/_15pxv"
-                android:paddingEnd="@dimen/_30pxh"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:ellipsize="end"
+                android:gravity="center"
                 android:paddingStart="@dimen/_30pxh"
                 android:paddingTop="@dimen/_15pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingBottom="@dimen/_15pxv"
                 android:singleLine="true"
                 android:text="@string/lbl_start_round"
                 android:textAllCaps="false"
-                style="@style/btnRoundedOutline_1" tools:text="@string/lbl_start_round"/>
+                tools:text="@string/lbl_start_round" />
         </LinearLayout>
     </FrameLayout>
 </layout>
