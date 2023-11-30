@@ -19,6 +19,6 @@ class Courses10VM(application: Application) : AndroidViewModel(application), Koi
     init {
         // Initialize golfClubs LiveData with data from the Room database
         val database = AppDatabase.getInstance(application)
-        golfClubs = database.golfClubDao().getAllGolfClubsLiveData()
+        golfClubs = database.golfClubDao().allGolfClubsLiveData
     }
 }

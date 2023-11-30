@@ -1,9 +1,11 @@
 package com.pgp.app.appcomponents.utility;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 public class RegisterDBHelper extends SQLiteOpenHelper {
 
@@ -76,5 +78,24 @@ public class RegisterDBHelper extends SQLiteOpenHelper {
         db.close();
         return fullName;
     }
+    public void updatePassword(String username, String newPassword) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(COLUMN_PASSWORD, newPassword);
 
+        String selection = COLUMN_USERNAME + " = ?";
+        String[] selectionArgs = {username};
+
+        int count = db.update(
+                TABLE_NAME,
+                values,
+                selection,
+                selectionArgs);
+
+        if (count == 0) {
+            Log.e("RegisterDBHelper", "Password update failed for username: " + username);
+        }
+
+        db.close();
+    }
 }

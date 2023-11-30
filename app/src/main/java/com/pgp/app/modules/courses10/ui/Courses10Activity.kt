@@ -8,7 +8,7 @@ import androidx.activity.viewModels
 import com.pgp.app.R
 import com.pgp.app.appcomponents.base.BaseActivity
 import com.pgp.app.databinding.ActivityCourses10Binding
-import com.pgp.app.modules.courses10.`data`.model.ListtitleRowModel
+import com.pgp.app.modules.courses10.data.model.ListtitleRowModel
 import com.pgp.app.modules.courses10.`data`.viewmodel.Courses10VM
 import androidx.lifecycle.Observer
 import kotlin.Int
@@ -36,7 +36,6 @@ class Courses10Activity : BaseActivity<ActivityCourses10Binding>(R.layout.activi
       finish()
     }
   }
-
 
   fun onClickRecyclerListtitle(
     view: View,

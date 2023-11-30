@@ -18,6 +18,7 @@ class Courses20Activity : BaseActivity<ActivityCourses20Binding>(R.layout.activi
   override fun onInitialized(): Unit {
     viewModel.navArguments = intent.extras?.getBundle("bundle")
     binding.courses20VM = viewModel
+    viewModel.updateCourses20Model(this)
   }
 
   override fun setUpClicks(): Unit {

@@ -8,7 +8,6 @@ import androidx.activity.viewModels
 import com.pgp.app.R
 import com.pgp.app.appcomponents.base.BaseActivity
 import com.pgp.app.databinding.ActivityStatisticsBinding
-import com.pgp.app.modules.history.ui.HistoryActivity
 import com.pgp.app.modules.profile.ui.ProfileActivity
 import com.pgp.app.modules.statistics.`data`.model.StatisticsRowModel
 import com.pgp.app.modules.statistics.`data`.viewmodel.StatisticsVM
@@ -22,7 +21,7 @@ class StatisticsActivity : BaseActivity<ActivityStatisticsBinding>(R.layout.acti
   override fun onInitialized(): Unit {
     viewModel.navArguments = intent.extras?.getBundle("bundle")
     val statisticsAdapter = StatisticsAdapter(viewModel.statisticsList.value?:mutableListOf())
-    binding.recyclerStatistics.adapter = statisticsAdapter
+    binding.linearColumnthirty.adapter = statisticsAdapter
     statisticsAdapter.setOnItemClickListener(
     object : StatisticsAdapter.OnItemClickListener {
       override fun onItemClick(view:View, position:Int, item : StatisticsRowModel) {
@@ -63,21 +62,7 @@ class StatisticsActivity : BaseActivity<ActivityStatisticsBinding>(R.layout.acti
     position: Int,
     item: StatisticsRowModel
   ) {
-    /** TODO As per your logic, Add constant type for item click.*/
-    when(0) {
-      0 ->  {
-        val destIntent = HistoryActivity.getIntent(this, null)
-        startActivity(destIntent)
-      }
-      1 ->  {
-        val destIntent = HistoryActivity.getIntent(this, null)
-        startActivity(destIntent)
-      }
-      2 ->  {
-        val destIntent = HistoryActivity.getIntent(this, null)
-        startActivity(destIntent)
-      }
-    }
+
   }
 
   companion object {

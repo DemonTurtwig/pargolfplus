@@ -13,7 +13,7 @@ data class RecordScore30Model(
   /**
    * TODO Replace with dynamic value
    */
-  var txtTitle: String? = MyApp.getInstance().resources.getString(R.string.lbl_philip_low)
+  var txtNamePlayer: String? = MyApp.getInstance().resources.getString(R.string.lbl_philip_low)
   ,
   /**
    * TODO Replace with dynamic value
@@ -38,7 +38,7 @@ data class RecordScore30Model(
   /**
    * TODO Replace with dynamic value
    */
-  var txtThree: String? = MyApp.getInstance().resources.getString(R.string.lbl_03)
+  var HoleId: String? = MyApp.getInstance().resources.getString(R.string.lbl_01)
   ,
   /**
    * TODO Replace with dynamic value
@@ -53,6 +53,15 @@ data class RecordScore30Model(
   /**
    * TODO Replace with dynamic value
    */
-  var txtPenalties: String? = MyApp.getInstance().resources.getString(R.string.lbl_index)
+  var txtPenalties: String? = MyApp.getInstance().resources.getString(R.string.lbl_index),
 
-)
+  var score: String? = MyApp.getInstance().resources.getString(R.string.lbl_9),
+
+  var txtPar: String? = MyApp.getInstance().resources.getString(R.string.lbl_3),
+
+  var txtIndex: String? = MyApp.getInstance().resources.getString(R.string.lbl_4)
+
+
+) {
+
+}

@@ -1,8 +1,10 @@
 package com.pgp.app.appcomponents.di
 
 import android.app.Application
+import androidx.room.Room
 import androidx.room.Room.databaseBuilder
 import com.pgp.app.appcomponents.database.AppDatabase
+import com.pgp.app.appcomponents.database.DatabaseInitializer
 import com.pgp.app.appcomponents.utility.AppPreferencesHelper
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
@@ -26,11 +28,20 @@ class MyApp : Application() {
             loadKoinModules(getKoinModules())
         }
 
-        appDatabase = databaseBuilder<AppDatabase>(
+        appDatabase = Room.databaseBuilder(
             applicationContext,
             AppDatabase::class.java, "golf_data"
-        )
-            .build()
+        ).build()
+
+        // Initialize the database
+        DatabaseInitializer.initializeData(appDatabase!!, applicationContext)
+    }
+
+    private fun databaseModule(): Module {
+        return module {
+            single { appDatabase }
+            single { get<AppDatabase>().strokesDao() }
+        }
     }
 
     /**
@@ -52,6 +63,7 @@ class MyApp : Application() {
     private fun getKoinModules(): MutableList<Module> {
         val koinModules = mutableListOf<Module>()
         koinModules.add(preferenceModule()) //register preference module
+        koinModules.add(databaseModule()) //register database module
         return koinModules
     }
 

@@ -1,6 +1,7 @@
 package com.pgp.app
 
 import com.pgp.app.appcomponents.base.BaseActivity
+import com.pgp.app.appcomponents.database.DatabaseInitializer
 import com.pgp.app.databinding.LayoutProgressDialogBinding
 
 class MainActivity : BaseActivity<LayoutProgressDialogBinding>(R.layout.layout_progress_dialog) {

@@ -13,12 +13,14 @@ import com.pgp.app.appcomponents.base.BaseActivity
 import com.pgp.app.appcomponents.utility.AppPreferencesHelper
 import com.pgp.app.appcomponents.utility.RegisterDBHelper
 import com.pgp.app.databinding.ActivityHomelogBinding
+import com.pgp.app.modules.courses10.ui.Courses10Activity
 import com.pgp.app.modules.courses20.ui.Courses20Activity
 import com.pgp.app.modules.homelog.`data`.model.HomelogRowModel
 import com.pgp.app.modules.homelog.`data`.viewmodel.HomelogVM
 import com.pgp.app.modules.homelog.data.viewmodel.HomelogVMFactory
 import com.pgp.app.modules.homemenu.ui.HomeMenuActivity
 import com.pgp.app.modules.profile.ui.ProfileActivity
+import com.pgp.app.modules.statistics.ui.StatisticsActivity
 import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Date
@@ -84,20 +86,39 @@ class HomelogActivity : BaseActivity<ActivityHomelogBinding>(R.layout.activity_h
       val destIntent = ProfileActivity.getIntent(this, null)
       startActivity(destIntent)
     }
-  }
 
-  fun onClickRecyclerHomelog(
-    view: View,
-    position: Int,
-    item: HomelogRowModel
-  ): Unit {
-    when(view.id) {
-      R.id.imageImageTwo -> {
-        val destIntent = Courses20Activity.getIntent(this, null)
-        startActivity(destIntent)
-      }
+    // 여기에 새로운 클릭 리스너들을 추가합니다.
+    binding.imageArrowright.setOnClickListener {
+      val destIntent = Courses10Activity.getIntent(this, null)
+      startActivity(destIntent)
+    }
+    binding.imageArrowrightOne.setOnClickListener {
+      val destIntent = StatisticsActivity.getIntent(this, null)
+      startActivity(destIntent)
+    }
+    binding.imageArrowrightThree.setOnClickListener {
+      val destIntent = StatisticsActivity.getIntent(this, null)
+      startActivity(destIntent)
+    }
+    binding.btnShowAll2.setOnClickListener {
+      val destIntent = Courses10Activity.getIntent(this, null)
+      startActivity(destIntent)
     }
   }
+
+
+    fun onClickRecyclerHomelog(
+      view: View,
+      position: Int,
+      item: HomelogRowModel
+    ): Unit {
+      when (view.id) {
+        R.id.imageImageTwo -> {
+          val destIntent = Courses10Activity.getIntent(this, null)
+          startActivity(destIntent)
+        }
+      }
+    }
 
   companion object {
     const val TAG: String = "HOMELOG_ACTIVITY"

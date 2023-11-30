@@ -79,9 +79,9 @@ class ListtitleAdapter(
           // Save txtSelangor and txtClub here
           val txtSelangor = golfClub.location
           val txtClub = golfClub.name
-
+          val txtClubID = golfClub.id;
           // Save data using AppPreferencesHelper
-          AppPreferencesHelper.saveGolfClubData(itemView.context, txtClub, txtSelangor, "", "")
+          AppPreferencesHelper.saveGolfClubData(itemView.context, txtClubID, txtClub, txtSelangor)
 
           val destIntent = Courses11Activity.getIntent(itemView.context, null)
           itemView.context.startActivity(destIntent)

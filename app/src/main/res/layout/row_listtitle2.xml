@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-        <variable name="listtitleRowModel" type="com.pgp.app.modules.courses10.data.model.ListtitleRowModel"/>
+        <variable name="listtitleRowModel2" type="com.pgp.app.modules.courses10.data.model.ListtitleRowModel2"/>
     </data>
 
     <LinearLayout
@@ -29,7 +29,7 @@
                 android:layout_width="@dimen/_72pxh"
                 android:layout_height="@dimen/_90pxh"
                 android:scaleType="fitXY"
-                android:src="@{listtitleRowModel.imageResId}"
+                android:src="@{listtitleRowModel2.imageResId2}"
                 tools:ignore="ContentDescription" />
 
             <LinearLayout
@@ -48,7 +48,7 @@
                     style="@style/txtIntersemibold14"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@{listtitleRowModel.txtTitle}"
+                    android:text="@{listtitleRowModel2.txtTitle2}"
                     tools:text="@string/msg_glenmarie_golf" />
 
             </LinearLayout>

@@ -27,7 +27,7 @@ class HomeMenuActivity : BaseActivity<ActivityHomeMenuBinding>(R.layout.activity
 
   override fun setUpClicks(): Unit {
     binding.imageCheckmark.setOnClickListener {
-      val destIntent = Courses20Activity.getIntent(this, null)
+      val destIntent = Courses10Activity.getIntent(this, null)
       startActivity(destIntent)
     }
 

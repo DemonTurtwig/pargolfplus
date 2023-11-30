@@ -47,9 +47,9 @@
         <activity
             android:name="com.pgp.app.modules.courses10.ui.Courses10Activity" android:screenOrientation="portrait"/>
         <activity
-            android:name="com.pgp.app.modules.courses11.ui.Courses11Activity" android:screenOrientation="portrait"/>
+            android:name="com.pgp.app.modules.courses10.ui.Courses11Activity" android:screenOrientation="portrait"/>
         <activity
-            android:name="com.pgp.app.modules.courses12.ui.Courses12Activity" android:screenOrientation="portrait"/>
+            android:name="com.pgp.app.modules.courses10.ui.Courses12Activity" android:screenOrientation="portrait"/>
         <activity
             android:name="com.pgp.app.modules.recordscore40.ui.RecordScore40Activity" android:screenOrientation="portrait"/>
     </application>

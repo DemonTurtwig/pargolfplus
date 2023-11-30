@@ -8,21 +8,31 @@ data class StatisticsRowModel(
   /**
    * TODO Replace with dynamic value
    */
-  var txtThirty: String? = MyApp.getInstance().resources.getString(R.string.lbl_30)
+  var txtTitle: String? = MyApp.getInstance().resources.getString(R.string.msg_glenmarie_golf)
   ,
   /**
    * TODO Replace with dynamic value
    */
-  var txtHCP: String? = MyApp.getInstance().resources.getString(R.string.lbl_hcp)
+  var txtMonth: String? = MyApp.getInstance().resources.getString(R.string.msg_january_23_202)
   ,
   /**
    * TODO Replace with dynamic value
    */
-  var txtAverage: String? = MyApp.getInstance().resources.getString(R.string.lbl_average)
+  var txtOneHundredThirteen: String? = MyApp.getInstance().resources.getString(R.string.lbl_106)
   ,
   /**
    * TODO Replace with dynamic value
    */
-  var txtJun: String? = MyApp.getInstance().resources.getString(R.string.lbl_jun)
+  var txtEighteen: String? = MyApp.getInstance().resources.getString(R.string.lbl_18)
+  ,
+  /**
+   * TODO Replace with dynamic value
+   */
+  var txtStableford: String? = MyApp.getInstance().resources.getString(R.string.lbl_stroke_play)
+  ,
+  /**
+   * TODO Replace with dynamic value
+   */
+  var txtBadgeBadgeWit: String? = MyApp.getInstance().resources.getString(R.string.lbl_38)
 
 )

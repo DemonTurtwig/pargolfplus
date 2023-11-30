@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
     <data>
-        <variable name="historyRowModel" type="com.pgp.app.modules.history.data.model.HistoryRowModel"/>
+        <variable
+            name="statisticsVM"
+            type="com.pgp.app.modules.statistics.data.viewmodel.StatisticsVM"/>
+        <variable
+            name="statisticsRowModel"
+            type="com.pgp.app.modules.statistics.data.model.StatisticsRowModel" />
+
     </data>
     <LinearLayout android:gravity="center_horizontal"
         android:id="@+id/linearColumntitle1"
@@ -24,7 +30,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="@dimen/_10pxh"
                     android:layout_width="match_parent"
-                    android:text="@{historyRowModel.txtTitle}"
+                    android:text="@{statisticsVM.statisticsModel.txtTitle}"
                     style="@style/txtIntersemibold14" tools:text="@string/msg_glenmarie_golf"/>
                 <TextView android:ellipsize="end"
                     android:id="@+id/txtMonth"
@@ -33,7 +39,7 @@
                     android:layout_marginTop="@dimen/_4pxv"
                     android:layout_width="wrap_content"
                     android:singleLine="true"
-                    android:text="@{historyRowModel.txtMonth}"
+                    android:text="@{statisticsVM.statisticsModel.txtMonth}"
                     style="@style/txtInterregular12_1" tools:text="@string/msg_january_23_202"/>
 
                 <LinearLayout
@@ -64,7 +70,7 @@
                 android:layout_marginTop="@dimen/_12pxv"
                 android:layout_weight="0.23" android:layout_width="0dp"
                 android:singleLine="true"
-                android:text="@{historyRowModel.txtOneHundredThirteen}"
+                android:text="@{statisticsVM.statisticsModel.txtOneHundredThirteen}"
                 style="@style/txtInterbold36" tools:text="@string/lbl_106"/>
 
         </LinearLayout>
@@ -96,7 +102,7 @@
                     android:layout_marginTop="@dimen/_1pxv"
                     android:layout_weight="0.14"
                     android:layout_width="0dp" android:singleLine="true"
-                    android:text="@{historyRowModel.txtEighteen}"
+                    android:text="@{statisticsVM.statisticsModel.txtEighteen}"
                     style="@style/txtInterregular12_1" tools:text="@string/lbl_18"/>
                 <View android:background="@color/bluegray_50"
                     android:id="@+id/lineLineOne"
@@ -111,7 +117,7 @@
                     android:layout_marginTop="@dimen/_1pxv"
                     android:layout_weight="0.71"
                     android:layout_width="0dp" android:singleLine="true"
-                    android:text="@{historyRowModel.txtStableford}"
+                    android:text="@{statisticsVM.statisticsModel.txtStableford}"
                     style="@style/txtInterregular12_1" tools:text="@string/lbl_stroke_play"/>
             </LinearLayout>
             <TextView android:ellipsize="end"
@@ -125,7 +131,7 @@
                 android:paddingStart="@dimen/_5pxh"
                 android:paddingTop="@dimen/_2pxv"
                 android:singleLine="true"
-                android:text="@{historyRowModel.txtBadgeBadgeWit}"
+                android:text="@{statisticsVM.statisticsModel.txtBadgeBadgeWit}"
                 style="@style/txtSolidRounded" tools:text="@string/lbl_38"/>
         </LinearLayout>
     </LinearLayout>

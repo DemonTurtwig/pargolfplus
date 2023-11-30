@@ -9,7 +9,5 @@ data class ListtitleRowModel(
   var txtTitle: String? = MyApp.getInstance().resources.getString(R.string.msg_glenmarie_golf),
   var txtSelangor: String? = MyApp.getInstance().resources.getString(R.string.lbl_selangor),
   var imageResId: Int? = null,
-  var txtClub: String? = MyApp.getInstance().resources.getString(R.string.msg_glenmarie_golf),
-  var txtTee: String? = MyApp.getInstance().resources.getString(R.string.tee_blue)
 )
 

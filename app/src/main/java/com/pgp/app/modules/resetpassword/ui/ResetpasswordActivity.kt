@@ -6,6 +6,7 @@ import android.os.Bundle
 import androidx.activity.viewModels
 import com.pgp.app.R
 import com.pgp.app.appcomponents.base.BaseActivity
+import com.pgp.app.appcomponents.utility.RegisterDBHelper
 import com.pgp.app.databinding.ActivityResetpasswordBinding
 import com.pgp.app.modules.login.ui.LoginActivity
 import com.pgp.app.modules.resetpassword.`data`.viewmodel.ResetpasswordVM
@@ -22,9 +23,23 @@ class ResetpasswordActivity :
   }
 
   override fun setUpClicks(): Unit {
+    val dbHelper = RegisterDBHelper(this)
+
     binding.btnResetPassword.setOnClickListener {
-      val destIntent = LoginActivity.getIntent(this, null)
-      startActivity(destIntent)
+      val newPassword = viewModel.resetpasswordModel.value?.etInputTextRiValue
+      val confirmPassword = viewModel.resetpasswordModel.value?.etInputTextRiOneValue
+
+      if (newPassword == confirmPassword) {
+        // TODO: Get the username of the user who is resetting the password.
+        // In this example, we assume the username is stored in a variable named `username`.
+        val username = "some_username"
+        dbHelper.updatePassword(username, newPassword)
+
+        val destIntent = LoginActivity.getIntent(this, null)
+        startActivity(destIntent)
+      } else {
+        // TODO: Show an error message to the user.
+      }
     }
   }
 

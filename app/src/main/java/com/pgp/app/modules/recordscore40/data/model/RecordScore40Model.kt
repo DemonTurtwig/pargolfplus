@@ -1,5 +1,7 @@
 package com.pgp.app.modules.recordscore40.data.model
 
+import android.text.Editable
+import androidx.core.content.ContextCompat
 import com.pgp.app.R
 import com.pgp.app.appcomponents.di.MyApp
 import kotlin.String
@@ -10,6 +12,8 @@ data class RecordScore40Model(
      */
     var txtResults: String? = MyApp.getInstance().resources.getString(R.string.lbl_results)
     ,
+
+    var courseFinal: String? = MyApp.getInstance().resources.getString(R.string.lbl_courses),
     /**
      * TODO Replace with dynamic value
      */
@@ -23,8 +27,9 @@ data class RecordScore40Model(
     /**
      * TODO Replace with dynamic value
      */
-    var txtBlue: String? = MyApp.getInstance().resources.getString(R.string.tee_blue)
-    ,
+    var txtBlue: String? = MyApp.getInstance().resources.getString(R.string.tee_blue),
+
+    var txtColorTee: Int? = ContextCompat.getColor(MyApp.getInstance(), R.color.blue_400),
     /**
      * TODO Replace with dynamic value
      */
@@ -45,21 +50,13 @@ data class RecordScore40Model(
      */
     var txtHoleCounter: String? = MyApp.getInstance().resources.getString(R.string.lbl_hole_01)
     ,
-    /**
-     * TODO Replace with dynamic value
-     */
-    var txtHolestrokeOne: String? = MyApp.getInstance().resources.getString(R.string.lbl_12)
-    ,
-    /**
-     * TODO Replace with dynamic value
-     */
+
     var txtHoleCounterOne: String? = MyApp.getInstance().resources.getString(R.string.lbl_hole_10)
     ,
     /**
      * TODO Replace with dynamic value
      */
-    var txtHolestrokeTen: String? = MyApp.getInstance().resources.getString(R.string.lbl_12)
-    ,
+
     /**
      * TODO Replace with dynamic value
      */
@@ -68,7 +65,7 @@ data class RecordScore40Model(
     /**
      * TODO Replace with dynamic value
      */
-    var txtHoleCounterThree: String? = MyApp.getInstance().resources.getString(R.string.lbl_hole_02)
+    var txtHoleCounterThree: String? = MyApp.getInstance().resources.getString(R.string.lbl_hole_09)
     ,
     /**
      * TODO Replace with dynamic value
@@ -78,8 +75,6 @@ data class RecordScore40Model(
     /**
      * TODO Replace with dynamic value
      */
-    var txtHolestrokeTwo: String? = MyApp.getInstance().resources.getString(R.string.lbl_12)
-    ,
     /**
      * TODO Replace with dynamic value
      */
@@ -88,8 +83,6 @@ data class RecordScore40Model(
     /**
      * TODO Replace with dynamic value
      */
-    var txtHolestrokeEleven: String? = MyApp.getInstance().resources.getString(R.string.lbl_12)
-    ,
     /**
      * TODO Replace with dynamic value
      */
@@ -98,8 +91,7 @@ data class RecordScore40Model(
     /**
      * TODO Replace with dynamic value
      */
-    var txtHolestrokeThree: String? = MyApp.getInstance().resources.getString(R.string.lbl_12)
-    ,
+
     /**
      * TODO Replace with dynamic value
      */
@@ -108,8 +100,7 @@ data class RecordScore40Model(
     /**
      * TODO Replace with dynamic value
      */
-    var txtHolestrokeTwelve: String? = MyApp.getInstance().resources.getString(R.string.lbl_12)
-    ,
+
     /**
      * TODO Replace with dynamic value
      */
@@ -118,8 +109,6 @@ data class RecordScore40Model(
     /**
      * TODO Replace with dynamic value
      */
-    var txtHolestrokeFour: String? = MyApp.getInstance().resources.getString(R.string.lbl_12)
-    ,
     /**
      * TODO Replace with dynamic value
      */
@@ -128,8 +117,6 @@ data class RecordScore40Model(
     /**
      * TODO Replace with dynamic value
      */
-    var txtHolestrokeThirteen: String? = MyApp.getInstance().resources.getString(R.string.lbl_12)
-    ,
     /**
      * TODO Replace with dynamic value
      */
@@ -138,8 +125,7 @@ data class RecordScore40Model(
     /**
      * TODO Replace with dynamic value
      */
-    var txtHolestrokeFive: String? = MyApp.getInstance().resources.getString(R.string.lbl_12)
-    ,
+
     /**
      * TODO Replace with dynamic value
      */
@@ -148,8 +134,6 @@ data class RecordScore40Model(
     /**
      * TODO Replace with dynamic value
      */
-    var txtHolestrokeFourteen: String? = MyApp.getInstance().resources.getString(R.string.lbl_12)
-    ,
     /**
      * TODO Replace with dynamic value
      */
@@ -158,8 +142,6 @@ data class RecordScore40Model(
     /**
      * TODO Replace with dynamic value
      */
-    var txtHolestrokeSix: String? = MyApp.getInstance().resources.getString(R.string.lbl_12)
-    ,
     /**
      * TODO Replace with dynamic value
      */
@@ -169,8 +151,6 @@ data class RecordScore40Model(
     /**
      * TODO Replace with dynamic value
      */
-    var txtHolestrokeFifteen: String? = MyApp.getInstance().resources.getString(R.string.lbl_12)
-    ,
     /**
      * TODO Replace with dynamic value
      */
@@ -179,8 +159,6 @@ data class RecordScore40Model(
     /**
      * TODO Replace with dynamic value
      */
-    var txtHolestrokeSeven: String? = MyApp.getInstance().resources.getString(R.string.lbl_12)
-    ,
     /**
      * TODO Replace with dynamic value
      */
@@ -189,8 +167,6 @@ data class RecordScore40Model(
     /**
      * TODO Replace with dynamic value
      */
-    var txtHolestrokeSixteen: String? = MyApp.getInstance().resources.getString(R.string.lbl_12)
-    ,
     /**
      * TODO Replace with dynamic value
      */
@@ -199,8 +175,6 @@ data class RecordScore40Model(
     /**
      * TODO Replace with dynamic value
      */
-    var txtHolestrokeEight: String? = MyApp.getInstance().resources.getString(R.string.lbl_12)
-    ,
     /**
      * TODO Replace with dynamic value
      */
@@ -209,18 +183,12 @@ data class RecordScore40Model(
     /**
      * TODO Replace with dynamic value
      */
-    var txtHolestrokeSeventeen: String? = MyApp.getInstance().resources.getString(R.string.lbl_12)
-    ,
     /**
      * TODO Replace with dynamic value
      */
-    var txtHoleCounterTwelve: String? = MyApp.getInstance().resources.getString(R.string.lbl_hole_09)
-    ,
     /**
      * TODO Replace with dynamic value
      */
-    var txtHolestrokeNine: String? = MyApp.getInstance().resources.getString(R.string.lbl_12)
-    ,
     /**
      * TODO Replace with dynamic value
      */
@@ -229,12 +197,12 @@ data class RecordScore40Model(
     /**
      * TODO Replace with dynamic value
      */
-    var txtHolestrokeEighteen: String? = MyApp.getInstance().resources.getString(R.string.lbl_12)
-    ,
     /**
      * TODO Replace with dynamic value
      */
-    var txtTotalScore: String? = MyApp.getInstance().resources.getString(R.string.lbl_total_score)
+    var txtTotalScore2: String? = MyApp.getInstance().resources.getString(R.string.lbl_total_score),
+
+    var txtTotalScore: String? = MyApp.getInstance().resources.getString(R.string.lbl_9)
     ,
     /**
      * TODO Replace with dynamic value
@@ -247,5 +215,27 @@ data class RecordScore40Model(
      */
     var txtPCCadjustment: String? =
         MyApp.getInstance().resources.getString(R.string.lbl_pcc_adjustment)
+    ,
+    var strokesResult1: String? = MyApp.getInstance().resources.getString(R.string.lbl_9),
+    var strokesResult2: String? = MyApp.getInstance().resources.getString(R.string.lbl_9),
+    var strokesResult3: String? = MyApp.getInstance().resources.getString(R.string.lbl_9),
+    var strokesResult4: String? = MyApp.getInstance().resources.getString(R.string.lbl_9),
+    var strokesResult5: String? = MyApp.getInstance().resources.getString(R.string.lbl_9),
+    var strokesResult6: String? = MyApp.getInstance().resources.getString(R.string.lbl_9),
+    var strokesResult7: String? = MyApp.getInstance().resources.getString(R.string.lbl_9),
+    var strokesResult8: String? = MyApp.getInstance().resources.getString(R.string.lbl_9),
+    var strokesResult9: String? = MyApp.getInstance().resources.getString(R.string.lbl_9),
+    var strokesResult10: String? = MyApp.getInstance().resources.getString(R.string.lbl_9),
+    var strokesResult11: String? = MyApp.getInstance().resources.getString(R.string.lbl_9),
+    var strokesResult12: String? = MyApp.getInstance().resources.getString(R.string.lbl_9),
+    var strokesResult13: String? = MyApp.getInstance().resources.getString(R.string.lbl_9),
+    var strokesResult14: String? = MyApp.getInstance().resources.getString(R.string.lbl_9),
+    var strokesResult15: String? = MyApp.getInstance().resources.getString(R.string.lbl_9),
+    var strokesResult16: String? = MyApp.getInstance().resources.getString(R.string.lbl_9),
+    var strokesResult17: String? = MyApp.getInstance().resources.getString(R.string.lbl_9),
+    var strokesResult18: String? = MyApp.getInstance().resources.getString(R.string.lbl_9),
+    var totalFinalScore: String? = MyApp.getInstance().resources.getString(R.string.lbl_9),
+    var totalScoreDifferential: String? = MyApp.getInstance().resources.getString(R.string.lbl_9),
+    var PCC: Editable? = null
 
 )

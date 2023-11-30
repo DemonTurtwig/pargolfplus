@@ -11,6 +11,8 @@ data class StatisticsModel(
   var txtStatistictrack: String? =
       MyApp.getInstance().resources.getString(R.string.msg_statistic_track)
   ,
+
+  var txtTitleBar: String? = MyApp.getInstance().resources.getString(R.string.lbl_playing_history),
   /**
    * TODO Replace with dynamic value
    */
@@ -80,6 +82,36 @@ data class StatisticsModel(
   /**
    * TODO Replace with dynamic value
    */
-  var txtSixtyThree: String? = MyApp.getInstance().resources.getString(R.string.lbl_63)
+  var txtSixtyThree: String? = MyApp.getInstance().resources.getString(R.string.lbl_63),
+
+  /**
+   * TODO Replace with dynamic value
+   */
+  var txtTitle: String? = MyApp.getInstance().resources.getString(R.string.msg_glenmarie_golf)
+  ,
+  /**
+   * TODO Replace with dynamic value
+   */
+  var txtMonth: String? = MyApp.getInstance().resources.getString(R.string.msg_january_23_202)
+  ,
+  /**
+   * TODO Replace with dynamic value
+   */
+  var txtOneHundredThirteen: String? = MyApp.getInstance().resources.getString(R.string.lbl_106)
+  ,
+  /**
+   * TODO Replace with dynamic value
+   */
+  var txtEighteen: String? = MyApp.getInstance().resources.getString(R.string.lbl_18)
+  ,
+  /**
+   * TODO Replace with dynamic value
+   */
+  var txtStableford: String? = MyApp.getInstance().resources.getString(R.string.lbl_stroke_play)
+  ,
+  /**
+   * TODO Replace with dynamic value
+   */
+  var txtBadgeBadgeWit: String? = MyApp.getInstance().resources.getString(R.string.lbl_38)
 
 )

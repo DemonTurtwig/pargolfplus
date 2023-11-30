@@ -56,5 +56,6 @@ data class ProfileModel(
   /**
    * TODO Replace with dynamic value
    */
-  var etInputTextRiOneValue: String? = null
+  var etInputTextRiOneValue: String? = null,
+  var txtFullname: String? = null
 )

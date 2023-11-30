@@ -76,19 +76,21 @@
                         android:layout_marginBottom="@dimen/_9pxv"
                         android:layout_weight="0.82"
                         android:ellipsize="end"
+                        android:fontFamily="@font/interbold"
                         android:singleLine="true"
                         android:text="@{recordScore40VM.recordScore40Model.txtLanguage}"
                         android:textStyle="bold"
                         tools:text="@string/msg_glenmarie_golf" />
 
-                    <TextView
-                        android:id="@+id/textView2"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.82"
-                        android:text="TextView" />
-
                 </LinearLayout>
+
+                <TextView
+                    android:id="@+id/clubnameresult"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_30pxv"
+                    android:layout_weight="0.82"
+                    android:text="@string/lbl_courses" />
 
                 <LinearLayout
                     android:id="@+id/linearRowandrewwade"
@@ -129,7 +131,8 @@
                             android:ellipsize="end"
                             android:singleLine="true"
                             android:text="@{recordScore40VM.recordScore40Model.txtBlue}"
-                            tools:text="@string/tee_blue" />
+                            tools:text="@string/tee_blue"
+                            />
 
                     </LinearLayout>
 
@@ -183,7 +186,7 @@
                             tools:text="@string/lbl_hole_01" />
 
                         <TextView
-                            android:id="@+id/txtHolestrokeOne"
+                            android:id="@+id/result01"
                             style="@style/txtSolidRounded_1"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
@@ -194,7 +197,7 @@
                             android:paddingTop="@dimen/_3pxv"
                             android:paddingBottom="@dimen/_3pxv"
                             android:singleLine="true"
-                            android:text="@{recordScore40VM.recordScore40Model.txtHolestrokeOne}"
+                            android:text="@{recordScore40VM.recordScore40Model.strokesResult1}"
                             tools:text="@string/lbl_12" />
                     </LinearLayout>
 
@@ -221,7 +224,7 @@
                             tools:text="@string/lbl_hole_10" />
 
                         <TextView
-                            android:id="@+id/txtHolestrokeTen"
+                            android:id="@+id/result10"
                             style="@style/txtSolidRounded_1"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
@@ -233,7 +236,7 @@
                             android:paddingTop="@dimen/_3pxv"
                             android:paddingBottom="@dimen/_3pxv"
                             android:singleLine="true"
-                            android:text="@{recordScore40VM.recordScore40Model.txtHolestrokeTen}"
+                            android:text="@{recordScore40VM.recordScore40Model.strokesResult10}"
                             android:textAlignment="center"
                             tools:text="@string/lbl_12" />
                     </LinearLayout>
@@ -279,7 +282,7 @@
                         </FrameLayout>
 
                         <TextView
-                            android:id="@+id/txtHolestrokeTwo"
+                            android:id="@+id/result02"
                             style="@style/txtSolidRounded_1"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
@@ -290,7 +293,7 @@
                             android:paddingTop="@dimen/_3pxv"
                             android:paddingBottom="@dimen/_3pxv"
                             android:singleLine="true"
-                            android:text="@{recordScore40VM.recordScore40Model.txtHolestrokeTwo}"
+                            android:text="@{recordScore40VM.recordScore40Model.strokesResult2}"
                             tools:text="@string/lbl_12" />
                     </LinearLayout>
 
@@ -317,7 +320,7 @@
                             tools:text="@string/lbl_hole_11" />
 
                         <TextView
-                            android:id="@+id/txtHolestrokeEleven"
+                            android:id="@+id/result11"
                             style="@style/txtSolidRounded_1"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
@@ -328,7 +331,7 @@
                             android:paddingTop="@dimen/_3pxv"
                             android:paddingBottom="@dimen/_3pxv"
                             android:singleLine="true"
-                            android:text="@{recordScore40VM.recordScore40Model.txtHolestrokeEleven}"
+                            android:text="@{recordScore40VM.recordScore40Model.strokesResult11}"
                             android:textAlignment="center"
                             tools:text="@string/lbl_12" />
                     </LinearLayout>
@@ -371,7 +374,7 @@
                                 tools:text="@string/lbl_hole_03" />
 
                             <TextView
-                                android:id="@+id/txtHolestrokeThree"
+                                android:id="@+id/result03"
                                 style="@style/txtSolidRounded_1"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
@@ -382,7 +385,7 @@
                                 android:paddingTop="@dimen/_3pxv"
                                 android:paddingBottom="@dimen/_3pxv"
                                 android:singleLine="true"
-                                android:text="@{recordScore40VM.recordScore40Model.txtHolestrokeThree}"
+                                android:text="@{recordScore40VM.recordScore40Model.strokesResult3}"
                                 tools:text="@string/lbl_12" />
                         </LinearLayout>
 
@@ -409,7 +412,7 @@
                                 tools:text="@string/lbl_hole_12" />
 
                             <TextView
-                                android:id="@+id/txtHolestrokeTwelve"
+                                android:id="@+id/result12"
                                 style="@style/txtSolidRounded_1"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
@@ -420,7 +423,7 @@
                                 android:paddingTop="@dimen/_3pxv"
                                 android:paddingBottom="@dimen/_3pxv"
                                 android:singleLine="true"
-                                android:text="@{recordScore40VM.recordScore40Model.txtHolestrokeTwelve}"
+                                android:text="@{recordScore40VM.recordScore40Model.strokesResult12}"
                                 android:textAlignment="center"
                                 tools:text="@string/lbl_12" />
                         </LinearLayout>
@@ -455,7 +458,7 @@
                                 tools:text="@string/lbl_hole_04" />
 
                             <TextView
-                                android:id="@+id/txtHolestrokeFour"
+                                android:id="@+id/result04"
                                 style="@style/txtSolidRounded_1"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
@@ -466,7 +469,7 @@
                                 android:paddingTop="@dimen/_3pxv"
                                 android:paddingBottom="@dimen/_3pxv"
                                 android:singleLine="true"
-                                android:text="@{recordScore40VM.recordScore40Model.txtHolestrokeFour}"
+                                android:text="@{recordScore40VM.recordScore40Model.strokesResult4}"
                                 tools:text="@string/lbl_12" />
                         </LinearLayout>
 
@@ -493,7 +496,7 @@
                                 tools:text="@string/lbl_hole_13" />
 
                             <TextView
-                                android:id="@+id/txtHolestrokeThirteen"
+                                android:id="@+id/result13"
                                 style="@style/txtSolidRounded_1"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
@@ -504,7 +507,7 @@
                                 android:paddingTop="@dimen/_3pxv"
                                 android:paddingBottom="@dimen/_3pxv"
                                 android:singleLine="true"
-                                android:text="@{recordScore40VM.recordScore40Model.txtHolestrokeThirteen}"
+                                android:text="@{recordScore40VM.recordScore40Model.strokesResult13}"
                                 android:textAlignment="center"
                                 tools:text="@string/lbl_12" />
                         </LinearLayout>
@@ -541,7 +544,7 @@
                                 tools:text="@string/lbl_hole_05" />
 
                             <TextView
-                                android:id="@+id/txtHolestrokeFive"
+                                android:id="@+id/result05"
                                 style="@style/txtSolidRounded_1"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
@@ -552,7 +555,7 @@
                                 android:paddingTop="@dimen/_3pxv"
                                 android:paddingBottom="@dimen/_3pxv"
                                 android:singleLine="true"
-                                android:text="@{recordScore40VM.recordScore40Model.txtHolestrokeFive}"
+                                android:text="@{recordScore40VM.recordScore40Model.strokesResult5}"
                                 tools:text="@string/lbl_12" />
                         </LinearLayout>
 
@@ -579,7 +582,7 @@
                                 tools:text="@string/lbl_hole_14" />
 
                             <TextView
-                                android:id="@+id/txtHolestrokeFourteen"
+                                android:id="@+id/result14"
                                 style="@style/txtSolidRounded_1"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
@@ -591,7 +594,7 @@
                                 android:paddingTop="@dimen/_3pxv"
                                 android:paddingBottom="@dimen/_3pxv"
                                 android:singleLine="true"
-                                android:text="@{recordScore40VM.recordScore40Model.txtHolestrokeFourteen}"
+                                android:text="@{recordScore40VM.recordScore40Model.strokesResult14}"
                                 android:textAlignment="gravity"
                                 tools:text="@string/lbl_12" />
                         </LinearLayout>
@@ -628,7 +631,7 @@
                                 tools:text="@string/lbl_hole_06" />
 
                             <TextView
-                                android:id="@+id/txtHolestrokeSix"
+                                android:id="@+id/result06"
                                 style="@style/txtSolidRounded_1"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
@@ -639,7 +642,7 @@
                                 android:paddingTop="@dimen/_3pxv"
                                 android:paddingBottom="@dimen/_3pxv"
                                 android:singleLine="true"
-                                android:text="@{recordScore40VM.recordScore40Model.txtHolestrokeSix}"
+                                android:text="@{recordScore40VM.recordScore40Model.strokesResult6}"
                                 tools:text="@string/lbl_12" />
                         </LinearLayout>
 
@@ -666,7 +669,7 @@
                                 tools:text="@string/lbl_hole_15" />
 
                             <TextView
-                                android:id="@+id/txtHolestrokeFifteen"
+                                android:id="@+id/result15"
                                 style="@style/txtSolidRounded_1"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
@@ -678,7 +681,7 @@
                                 android:paddingTop="@dimen/_3pxv"
                                 android:paddingBottom="@dimen/_3pxv"
                                 android:singleLine="true"
-                                android:text="@{recordScore40VM.recordScore40Model.txtHolestrokeFifteen}"
+                                android:text="@{recordScore40VM.recordScore40Model.strokesResult15}"
                                 android:textAlignment="gravity"
                                 tools:text="@string/lbl_12" />
                         </LinearLayout>
@@ -713,7 +716,7 @@
                                 tools:text="@string/lbl_hole_07" />
 
                             <TextView
-                                android:id="@+id/txtHolestrokeSeven"
+                                android:id="@+id/result07"
                                 style="@style/txtSolidRounded_1"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
@@ -724,7 +727,7 @@
                                 android:paddingTop="@dimen/_3pxv"
                                 android:paddingBottom="@dimen/_3pxv"
                                 android:singleLine="true"
-                                android:text="@{recordScore40VM.recordScore40Model.txtHolestrokeSeven}"
+                                android:text="@{recordScore40VM.recordScore40Model.strokesResult7}"
                                 tools:text="@string/lbl_12" />
                         </LinearLayout>
 
@@ -751,7 +754,7 @@
                                 tools:text="@string/lbl_hole_16" />
 
                             <TextView
-                                android:id="@+id/txtHolestrokeSixteen"
+                                android:id="@+id/result16"
                                 style="@style/txtSolidRounded_1"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
@@ -762,7 +765,7 @@
                                 android:paddingTop="@dimen/_3pxv"
                                 android:paddingBottom="@dimen/_3pxv"
                                 android:singleLine="true"
-                                android:text="@{recordScore40VM.recordScore40Model.txtHolestrokeSixteen}"
+                                android:text="@{recordScore40VM.recordScore40Model.strokesResult16}"
                                 tools:text="@string/lbl_12" />
                         </LinearLayout>
                     </LinearLayout>
@@ -797,7 +800,7 @@
                                 tools:text="@string/lbl_hole_08" />
 
                             <TextView
-                                android:id="@+id/txtHolestrokeEight"
+                                android:id="@+id/result08"
                                 style="@style/txtSolidRounded_1"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
@@ -808,7 +811,7 @@
                                 android:paddingTop="@dimen/_3pxv"
                                 android:paddingBottom="@dimen/_3pxv"
                                 android:singleLine="true"
-                                android:text="@{recordScore40VM.recordScore40Model.txtHolestrokeEight}"
+                                android:text="@{recordScore40VM.recordScore40Model.strokesResult8}"
                                 tools:text="@string/lbl_12" />
                         </LinearLayout>
 
@@ -835,7 +838,7 @@
                                 tools:text="@string/lbl_hole_17" />
 
                             <TextView
-                                android:id="@+id/txtHolestrokeSeventeen"
+                                android:id="@+id/result17"
                                 style="@style/txtSolidRounded_1"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
@@ -846,7 +849,7 @@
                                 android:paddingTop="@dimen/_3pxv"
                                 android:paddingBottom="@dimen/_3pxv"
                                 android:singleLine="true"
-                                android:text="@{recordScore40VM.recordScore40Model.txtHolestrokeSeventeen}"
+                                android:text="@{recordScore40VM.recordScore40Model.strokesResult17}"
                                 android:textAlignment="gravity"
                                 tools:text="@string/lbl_12" />
                         </LinearLayout>
@@ -878,11 +881,11 @@
                                 android:layout_weight="0.57"
                                 android:ellipsize="end"
                                 android:singleLine="true"
-                                android:text="@{recordScore40VM.recordScore40Model.txtHoleCounterTwelve}"
+                                android:text="@{recordScore40VM.recordScore40Model.txtHoleCounterThree}"
                                 tools:text="@string/lbl_hole_09" />
 
                             <TextView
-                                android:id="@+id/txtHolestrokeNine"
+                                android:id="@+id/result09"
                                 style="@style/txtSolidRounded_1"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
@@ -894,7 +897,7 @@
                                 android:paddingTop="@dimen/_3pxv"
                                 android:paddingBottom="@dimen/_3pxv"
                                 android:singleLine="true"
-                                android:text="@{recordScore40VM.recordScore40Model.txtHolestrokeNine}"
+                                android:text="@{recordScore40VM.recordScore40Model.strokesResult9}"
                                 tools:text="@string/lbl_12" />
                         </LinearLayout>
 
@@ -921,7 +924,7 @@
                                 tools:text="@string/lbl_hole_18" />
 
                             <TextView
-                                android:id="@+id/txtHolestrokeEighteen"
+                                android:id="@+id/result18"
                                 style="@style/txtSolidRounded_1"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
@@ -933,7 +936,7 @@
                                 android:paddingTop="@dimen/_3pxv"
                                 android:paddingBottom="@dimen/_3pxv"
                                 android:singleLine="true"
-                                android:text="@{recordScore40VM.recordScore40Model.txtHolestrokeEighteen}"
+                                android:text="@{recordScore40VM.recordScore40Model.strokesResult18}"
                                 android:textAlignment="gravity"
                                 tools:text="@string/lbl_12" />
                         </LinearLayout>
@@ -976,15 +979,15 @@
                         android:layout_weight="0.7"
                         android:ellipsize="end"
                         android:singleLine="true"
-                        android:text="@{recordScore40VM.recordScore40Model.txtTotalScore}"
+                        android:text="@{recordScore40VM.recordScore40Model.txtTotalScore2}"
                         tools:text="@string/lbl_total_score" />
 
-                    <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/btnOneHundredTwenty"
-                        style="@style/btnSolidRounded_8"
+                    <TextView
+                        android:id="@+id/totalscore"
                         android:layout_width="@dimen/_48pxh"
                         android:layout_height="@dimen/_40pxv"
                         android:layout_marginStart="@dimen/_42pxh"
+                        android:background="@drawable/rectangle_bg_gray_100_radius_8"
                         android:ellipsize="end"
                         android:gravity="center"
                         android:paddingStart="@dimen/_10pxh"
@@ -992,9 +995,9 @@
                         android:paddingEnd="@dimen/_10pxh"
                         android:paddingBottom="@dimen/_8pxv"
                         android:singleLine="true"
-                        android:text="@string/lbl_120"
+                        android:text="@{recordScore40VM.recordScore40Model.txtTotalScore}"
                         android:textAllCaps="false"
-                        tools:text="@string/lbl_120" />
+                        android:textColor="@color/black_900" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -1020,12 +1023,12 @@
                         android:text="@{recordScore40VM.recordScore40Model.txtScoreDifferent}"
                         tools:text="@string/msg_score_different" />
 
-                    <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/btn245"
-                        style="@style/btnSolidRounded_8"
+                    <TextView
+                        android:id="@+id/scorediff"
                         android:layout_width="@dimen/_48pxh"
                         android:layout_height="@dimen/_40pxv"
                         android:layout_marginStart="@dimen/_41pxh"
+                        android:background="@drawable/rectangle_bg_gray_100_radius_8"
                         android:ellipsize="end"
                         android:gravity="center"
                         android:paddingStart="@dimen/_7pxh"
@@ -1033,9 +1036,9 @@
                         android:paddingEnd="@dimen/_7pxh"
                         android:paddingBottom="@dimen/_8pxv"
                         android:singleLine="true"
-                        android:text="@string/lbl_24_5"
+                        android:text="@{recordScore40VM.recordScore40Model.totalScoreDifferential}"
                         android:textAllCaps="false"
-                        tools:text="@string/lbl_24_5" />
+                        android:textColor="@color/black_900" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -1062,7 +1065,7 @@
                         tools:text="@string/lbl_pcc_adjustment" />
 
                     <EditText
-                        android:id="@+id/btn3"
+                        android:id="@+id/pcc"
                         android:layout_width="@dimen/_48pxh"
                         android:layout_height="@dimen/_42pxv"
                         android:layout_marginStart="@dimen/_42pxh"

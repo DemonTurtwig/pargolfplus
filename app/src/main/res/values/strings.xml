@@ -35,7 +35,7 @@
     <string name="msg_check_your_stat">Check Your Statistics</string>
     <string name="lbl_index">Index</string>
     <string name="lbl_41">41</string>
-    <string name="lbl_par2">Par</string>
+    <string name="lbl_par2">PAR</string>
     <string name="lbl_40">40</string>
     <string name="lbl_save_changes">Save Changes</string>
     <string name="lbl_last_name">Last name</string>
@@ -186,4 +186,6 @@
     <string name="lbl_24_5">24.5</string>
     <string name="lbl_120">120</string>
     <string name="clubs">Choose a Club</string>
+    <string name= "lbl_bukit_jalil">Bukit Jalil</string>
+    <string name= "lbl_golfplus">GOLF+</string>
 </resources>

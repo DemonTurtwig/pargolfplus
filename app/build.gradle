@@ -14,7 +14,9 @@ def glideVersion = '4.11.0'
 android {
     compileSdkVersion 33
     buildToolsVersion "30.0.3"
-
+    viewBinding {
+        enabled = true
+    }
     defaultConfig {
         applicationId "com.pgp.app"
         minSdkVersion 23
@@ -59,7 +61,18 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleVersion"
     implementation "androidx.activity:activity-ktx:1.6.1"
     implementation "androidx.fragment:fragment-ktx:1.5.5"
+    def room_version = "2.4.3"  // Use the same version as your Room library
 
+    // Room components
+    implementation "androidx.room:room-runtime:2.4.3"
+    kapt "androidx.room:room-compiler:2.4.3"
+
+    // Coroutines
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.0"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.0"
+
+    // Room coroutine support
+    implementation "androidx.room:room-ktx:2.4.3"
     implementation 'com.google.android.material:material:1.7.0'
 
     implementation "io.insert-koin:koin-core:$koin_version"

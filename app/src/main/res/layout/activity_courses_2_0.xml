@@ -59,17 +59,19 @@
                 android:layout_marginStart="@dimen/_12pxh"
                 android:layout_marginTop="@dimen/_1pxv"
                 android:fontFamily="@font/interbold"
-                android:text="@string/lbl_courses"
-                android:textColor="@color/bluegray_100" />
+                android:text="@{courses20VM.courses20Model.txtCourse}"
+                android:textColor="@color/bluegray_100"
+                tools:text="@string/lbl_courses"
+                android:textSize="16dp" />
 
             <TextView
                 android:id="@+id/teecolortextview"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_12pxh"
                 android:fontFamily="@font/interbold"
-                android:text="@string/tee_blue"
-                android:textColor="@color/blue_400" />
+                android:text="@{courses20VM.courses20Model.colorTee}"
+                android:textColor="@{courses20VM.courses20Model.colorTextTee}" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnStartRound"
